@@ -1,3 +1,5 @@
+import BannerList from "@/app/_components/BannerList";
+
 export default function Home() {
-  return <main className="h-dvh w-dvw"></main>;
+  return <BannerList />;
 }
