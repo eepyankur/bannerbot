@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/app/providers";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 const jetBrainsMono = JetBrains_Mono({
@@ -24,6 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} ${jetBrainsMono.variable}`}>
         <Providers>{children}</Providers>
+        <Analytics />
       </body>
     </html>
   );
