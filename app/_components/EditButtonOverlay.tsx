@@ -1,4 +1,4 @@
-export default function EditOverlay() {
+export default function EditButtonOverlay() {
   return (
     <div
       className={`absolute left-0 top-0 flex h-full w-full items-center justify-center rounded-3xl bg-gradient-to-t from-black/60 to-black/60 opacity-0 transition-[opacity,transform] duration-200 ease-linear group-hover:scale-105 group-hover:opacity-100`}

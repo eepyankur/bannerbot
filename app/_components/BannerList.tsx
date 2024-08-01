@@ -2,7 +2,7 @@
 
 import { useGlobalContext } from "@/app/_services/GlobalContextProvider";
 import BannerTemplate from "@/app/_components/BannerTemplate";
-import EditOverlay from "@/app/_components/EditOverlay";
+import EditButtonOverlay from "@/app/_components/EditButtonOverlay";
 
 export default function BannerList() {
   const { state, dispatch } = useGlobalContext();
@@ -21,7 +21,7 @@ export default function BannerList() {
           }
         >
           <BannerTemplate banner={banner} />
-          <EditOverlay />
+          <EditButtonOverlay />
         </div>
       ))}
     </div>

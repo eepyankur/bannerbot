@@ -8,6 +8,7 @@ import {
 import BannerTemplate from "@/app/_components/BannerTemplate";
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
+import { toPng } from "html-to-image";
 
 export default function BannerEditTemplate() {
   const { state, dispatch } = useGlobalContext();
@@ -19,6 +20,8 @@ export default function BannerEditTemplate() {
   const [description, setDescription] = useState<string>("");
   const [cta, setCta] = useState<string>("");
   const [background, setBackground] = useState<number>(0);
+
+  const downloadDivRef = useRef(null);
 
   // loads selected banner
   useEffect(() => {
@@ -67,6 +70,7 @@ export default function BannerEditTemplate() {
               className={
                 "relative flex flex-col items-center justify-center gap-2 p-10 md:h-full md:w-1/2"
               }
+              ref={downloadDivRef}
             >
               <BannerTemplate
                 banner={{
@@ -223,7 +227,24 @@ export default function BannerEditTemplate() {
                 >
                   Save
                 </button>
-                <a href="" download className={"text-sm text-blue-500"}>
+                <a
+                  href=""
+                  onClick={(e) => {
+                    e.preventDefault();
+                    (async () => {
+                      if (downloadDivRef.current) {
+                        const dataURL = await toPng(downloadDivRef.current, {
+                          cacheBust: true,
+                        });
+                        const link = document.createElement("a");
+                        link.download = "banner.png";
+                        link.href = dataURL;
+                        link.click();
+                      }
+                    })();
+                  }}
+                  className={"text-sm text-blue-500"}
+                >
                   Download
                 </a>
               </div>
