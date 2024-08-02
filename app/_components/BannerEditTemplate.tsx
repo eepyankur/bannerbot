@@ -50,7 +50,7 @@ export default function BannerEditTemplate() {
             ease: "easeInOut",
           }}
           className={
-            "fixed left-0 top-0 flex h-full w-full items-center justify-around bg-gradient-to-t from-black/50 backdrop-blur-[2px]"
+            "fixed left-0 top-0 flex h-full w-full items-center justify-around overscroll-none bg-gradient-to-t from-black/50 backdrop-blur-[2px]"
           }
         >
           <motion.div
@@ -85,11 +85,19 @@ export default function BannerEditTemplate() {
                 Image Attribution:{" "}
                 <span className={"italic"}>
                   Photo by{" "}
-                  <a className={"text-blue-500"} href="https://unsplash.com/">
+                  <a
+                    className={"text-blue-500"}
+                    target={"_blank"}
+                    href="https://unsplash.com/"
+                  >
                     XYZ
                   </a>{" "}
                   on{" "}
-                  <a className={"text-blue-500"} href="https://unsplash.com/">
+                  <a
+                    className={"text-blue-500"}
+                    target={"_blank"}
+                    href="https://unsplash.com/"
+                  >
                     Unsplash
                   </a>
                 </span>

@@ -10,7 +10,7 @@ export default function BannerTemplate({ banner }: { banner: Banner }) {
 
   return (
     <div
-      className={`relative flex flex-col items-center justify-evenly overflow-clip rounded-3xl transition-transform duration-200 ease-linear group-hover:scale-105 ${state.size === "square" && "aspect-square w-full"} ${state.size === "portrait" && "aspect-[5/7] w-full md:h-full md:w-auto"} ${state.size === "landscape" && "aspect-[10/5] w-full"}`}
+      className={`relative flex select-none flex-col items-center justify-evenly overflow-clip rounded-3xl transition-transform duration-200 ease-linear group-hover:scale-105 ${state.size === "square" && "aspect-square w-full"} ${state.size === "portrait" && "aspect-[5/7] w-full md:h-full md:w-auto"} ${state.size === "landscape" && "aspect-[10/5] w-full"}`}
       style={{
         backgroundImage: `url(${state.bannerImages[banner.background]})`,
         backgroundSize: "cover",

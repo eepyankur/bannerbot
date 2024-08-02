@@ -11,7 +11,7 @@ export default function InputPill() {
   return (
     <div
       className={
-        "flex w-1/2 flex-col items-center justify-evenly gap-5 rounded-xl border-2 p-2 md:flex-row"
+        "flex w-3/4 flex-col items-center justify-evenly gap-5 rounded-xl border-2 p-2 md:w-1/2 md:flex-row"
       }
     >
       <input

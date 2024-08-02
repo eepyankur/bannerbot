@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main
       className={
-        "relative flex h-fit w-full min-w-[350px] flex-col items-center gap-20 overflow-auto py-40 font-jetBrainsMono md:min-w-[1500px]"
+        "relative flex h-dvh w-full min-w-[350px] flex-col items-center gap-20 overflow-auto py-40 font-jetBrainsMono md:min-w-[1500px]"
       }
     >
       <Logo />

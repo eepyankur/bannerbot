@@ -1,9 +1,9 @@
 import type React from "react";
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
-import "./globals.css";
-import { Providers } from "@/app/providers";
 import { Analytics } from "@vercel/analytics/react";
+import { Providers } from "@/app/providers";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 const jetBrainsMono = JetBrains_Mono({
@@ -23,7 +23,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${jetBrainsMono.variable}`}>
+      <body
+        className={`${inter.className} ${jetBrainsMono.variable} overflow-y-hidden`}
+      >
         <Providers>{children}</Providers>
         <Analytics />
       </body>
